@@ -1,21 +1,24 @@
-import { StyleSheet, Text, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, useState} from "react-native";
 import React from "react";
 
-const Tombol = ({title, color, teksColor, onClick}) => {
+
+const Tombol = ({title, color, teksColor, onClick, ukuranFont,  }) => {
     return (    
         <TouchableOpacity onPress={onClick} style ={[style.container, {backgroundColor: color}]} >
-            <Text style={{ color : teksColor }}>{title}</Text>
+            <Text style={{ color : teksColor , fontSize:ukuranFont }}>{title}</Text>
+            
         </TouchableOpacity>
     )
 }
 
 const style = StyleSheet.create ({
     container: {
-        padding: 20,
+        padding: 5,
+        paddingHorizontal:10,
         margin: 50,
-        borderRadius: 10,
+        borderRadius: 100,
         alignItems: "center",
-        elevation: 10,
+        elevation:20,
         fontSize: 60,
         fontWeight: "bold"
     }
