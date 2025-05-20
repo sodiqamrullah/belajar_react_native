@@ -245,38 +245,58 @@
 // export default App
 
 
-import React from "react"
-import { Text, View, StyleSheet, Dimensions} from "react-native"
-import HeaderCustom from "./components/HeaderCustom"
+// HARI SENIN 19 MEI 2025
+
+// import React from "react"
+// import { Text, View, StyleSheet, Dimensions} from "react-native"
+// import HeaderCustom from "./components/HeaderCustom"
 
 
+
+// const App = () => {
+
+//     console.log(Dimensions.get("window").width)
+//         console.log(Dimensions.get("window").height)
+
+
+//   return (
+//     <View style={styles.continer}>
+
+//       {/* Header
+//       <View style={{height: 50, width: Dimensions.get("window").width, backgroundColor:"green"}}> */}
+
+//             <View>
+//               <HeaderCustom title="to do list" colorCustom="black"/>
+//            </View>
+
+//         <Text>Hallo React Native</Text>
+//     </View>
+//   )
+// }
+
+// const styles = StyleSheet.create({
+// continer: {
+// 	flex: 1, 
+// 	backgroundColor:'red'
+//    }
+// })
+
+// export default App
+
+
+// tugas Selasa 20 Mei 2025
+
+import React from "react";
+import { Text, View} from "react-native";
+import ImageCustom from "./components/ImageCustom";
 
 const App = () => {
-
-    console.log(Dimensions.get("window").width)
-        console.log(Dimensions.get("window").height)
-
-
-  return (
-    <View style={styles.continer}>
-
-      {/* Header
-      <View style={{height: 50, width: Dimensions.get("window").width, backgroundColor:"green"}}> */}
-
-            <View>
-              <HeaderCustom title="to do list" colorCustom="black"/>
-           </View>
-
-        <Text>Hallo React Native</Text>
+  return(
+    <View>
+      <ImageCustom uri={'https://3.bp.blogspot.com/-rN867EUYKbU/WyYqrkJxRyI/AAAAAAAAASI/R6OOwN6BSd8gZr7W8pfTdEdAI5MFxdZlwCEwYBhgL/s1600/Desain-rumah-minimalis-modern-terbaru..jpg'}/>
     </View>
+    
   )
 }
-
-const styles = StyleSheet.create({
-continer: {
-	flex: 1, 
-	backgroundColor:'red'
-   }
-})
 
 export default App
