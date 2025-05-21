@@ -262,7 +262,7 @@
 //   return (
 //     <View style={styles.continer}>
 
-//       {/* Header
+//       {/* Header 
 //       <View style={{height: 50, width: Dimensions.get("window").width, backgroundColor:"green"}}> */}
 
 //             <View>
@@ -284,26 +284,92 @@
 // export default App
 
 
+
+
+
 // tugas Selasa 20 Mei 2025
 
-import React from "react";
-import {Text, View, Alert} from "react-native";
-import ImageCustom from "./components/ImageCustom";
-import ButtonCostom from "./components/ButtonCostom";
+// import React from "react";
+// import {Text, View, Alert} from "react-native";
+// import ImageCustom from "./components/ImageCustom";
+// import ButtonCostom from "./components/ButtonCostom";
+
+// const App = () => {
+//   return(
+//     <View>
+
+//       <ImageCustom  uri={'https://3.bp.blogspot.com/-rN867EUYKbU/WyYqrkJxRyI/AAAAAAAAASI/R6OOwN6BSd8gZr7W8pfTdEdAI5MFxdZlwCEwYBhgL/s1600/Desain-rumah-minimalis-modern-terbaru..jpg'}/>
+
+//       <Text style={{color:"black", alignSelf:"center"}}>ASSALAMU'ALAIKUM</Text>
+//       <ButtonCostom title ='Pencet Me' color='red' teksColor={"white"} ukuranFont={60} onClick={() => Alert.alert("terima kasih sudah memencet aku")}/>    
+      
+//     </View>
+    
+//   )
+// }
+
+
+// export default App
+
+import { View, Text, ScrollView, StyleSheet, TouchableOpacity, Alert, TextInput } from 'react-native'
+import React from 'react'
+import HeaderCustom from './components/HeaderCustom'
+
+
+const handlerClickDelete = () => {
+  Alert.alert("Click Delete")
+}
+
+const handlerAddData = () => {
+  Alert.alert("Click Add")
+}
+
 
 const App = () => {
-  return(
-    <View>
+  return (
+    <View style={StyleSheet.container}>
+       
+       {/* Header */}
+      <HeaderCustom title='To Do List'/>
 
-      <ImageCustom  uri={'https://3.bp.blogspot.com/-rN867EUYKbU/WyYqrkJxRyI/AAAAAAAAASI/R6OOwN6BSd8gZr7W8pfTdEdAI5MFxdZlwCEwYBhgL/s1600/Desain-rumah-minimalis-modern-terbaru..jpg'}/>
+      {/* Body */}
+      <ScrollView contentContainerStyle= {{paddingHorizontal: 12}} showsVerticalScrollIndicator={true}>
+      <View style={{height:60, width:"100%", backgroundColor:"white", flexDirection:"row", justifyContent:"space-between", alignItems:"center", paddingHorizontal:12, marginTop:12, borderRadius:5, elevation: 3}}>
+        <Text style={{color:"black"}}>Activity Harian</Text>
+        <TouchableOpacity style={{height:30, width:70, backgroundColor:"red", justifyContent:"center", alignItems:"center", borderRadius: 3}} onPress={() => handlerClickDelete()}>
+        <Text style={{color:"white"}}>DELETE</Text>
+        </TouchableOpacity>
 
-      <Text style={{color:"black", alignSelf:"center"}}>ASSALAMU'ALAIKUM</Text>
-      <ButtonCostom title ='Pencet Me' color='red' teksColor={"white"} ukuranFont={60} onClick={() => Alert.alert("terima kasih sudah memencet aku")}/>    
-      
+      </View>
+       </ScrollView>
+
+       {/* Footer */}
+
+       {/* Floating Button */}
+       {/* <TouchableOpacity style={{height:50, width:50, backgroundColor:"teal", justifyContent:"center", alignItems:"center", borderRadius:5, position:"absolute", bottom:12, right:12}}>
+       <Text style={{fontSize: 30, fontWeight:"bold", color:"white"}}>+</Text>
+       </TouchableOpacity> */}
+
+       <View style={{width:"100", backgroundColor:"yellow", borderTopWidth:0.5, borderColor:"gray", flexDirection:"row", justifyContent:"space-between", alignItems:"center", padding:6 }}>
+
+       <TextInput placeholder='Tulis Kegiatan Harian' placeholderTextColor={"green"} style={{color:"black"}}/>
+        <TouchableOpacity style={{height:50, width:50, backgroundColor:"teal", justifyContent:"center", alignItems:"center", borderRadius:5}} onPress={() => handlerAddData()}>
+       <Text style={{fontSize: 30, fontWeight:"bold", color:"white"}}>+</Text>
+       </TouchableOpacity>
+
+       </View>
+
     </View>
-    
   )
 }
+
+
+const style = StyleSheet.create({
+  container :{
+    flex: 1,
+    backgroundColor: "yellow"
+  }
+})
 
 
 export default App
