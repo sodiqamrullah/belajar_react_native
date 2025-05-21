@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TouchableOpacity, useState} from "react-native";
+import { StyleSheet, Text, TouchableOpacity} from "react-native";
 import React from "react";
 
 

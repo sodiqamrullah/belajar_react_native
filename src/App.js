@@ -287,16 +287,23 @@
 // tugas Selasa 20 Mei 2025
 
 import React from "react";
-import { Text, View} from "react-native";
+import {Text, View, Alert} from "react-native";
 import ImageCustom from "./components/ImageCustom";
+import ButtonCostom from "./components/ButtonCostom";
 
 const App = () => {
   return(
     <View>
-      <ImageCustom uri={'https://3.bp.blogspot.com/-rN867EUYKbU/WyYqrkJxRyI/AAAAAAAAASI/R6OOwN6BSd8gZr7W8pfTdEdAI5MFxdZlwCEwYBhgL/s1600/Desain-rumah-minimalis-modern-terbaru..jpg'}/>
+
+      <ImageCustom  uri={'https://3.bp.blogspot.com/-rN867EUYKbU/WyYqrkJxRyI/AAAAAAAAASI/R6OOwN6BSd8gZr7W8pfTdEdAI5MFxdZlwCEwYBhgL/s1600/Desain-rumah-minimalis-modern-terbaru..jpg'}/>
+
+      <Text style={{color:"black", alignSelf:"center"}}>ASSALAMU'ALAIKUM</Text>
+      <ButtonCostom title ='Pencet Me' color='red' teksColor={"white"} ukuranFont={60} onClick={() => Alert.alert("terima kasih sudah memencet aku")}/>    
+      
     </View>
     
   )
 }
+
 
 export default App
