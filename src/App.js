@@ -327,7 +327,7 @@ const handlerAddData = () => {
 
 const App = () => {
   return (
-    <View style={StyleSheet.container}>
+    <View style={styles.container}>
        
        {/* Header */}
       <HeaderCustom title='To Do List'/>
@@ -350,7 +350,7 @@ const App = () => {
        <Text style={{fontSize: 30, fontWeight:"bold", color:"white"}}>+</Text>
        </TouchableOpacity> */}
 
-       <View style={{width:"100", backgroundColor:"yellow", borderTopWidth:0.5, borderColor:"gray", flexDirection:"row", justifyContent:"space-between", alignItems:"center", padding:6 }}>
+       <View style={{top: '90%', right: 0, left: 0, bottom: 0, backgroundColor:"white", borderTopWidth:0.5, borderColor:"gray", flexDirection:"row", justifyContent:"space-between", alignItems:"center", padding:6, position:"absolute" }}>
 
        <TextInput placeholder='Tulis Kegiatan Harian' placeholderTextColor={"green"} style={{color:"black"}}/>
         <TouchableOpacity style={{height:50, width:50, backgroundColor:"teal", justifyContent:"center", alignItems:"center", borderRadius:5}} onPress={() => handlerAddData()}>
@@ -364,7 +364,7 @@ const App = () => {
 }
 
 
-const style = StyleSheet.create({
+const styles = StyleSheet.create({
   container :{
     flex: 1,
     backgroundColor: "yellow"
